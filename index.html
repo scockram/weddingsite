@@ -1,1 +1,111 @@
-hello world
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+SC:400,700|Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href='styles.css' rel='stylesheet' type='text/css'>
+    <title>Lydia & Steve</title>
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar-main" data-offset="80">
+
+    <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a href="#section-wedding">Wedding</a></li>
+          <li><a href="#section-reception">Reception</a></li>
+          <li><a href="#section-travel">Travel</a></li>
+          <li><a href="#section-list">List</a></li>
+          <li><a href="#section-accomodation">Accomodation</a></li>
+          <!--<li><a href="#section-tips">Tips</a></li>-->
+          <li><a href="#section-rsvp">RSVP</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <section id="section-wedding" class="row">
+        <h2>The Wedding</h2>
+        <p>The marriage ceremony will take place at <strong>Belmont Chapel, Western Way, Exeter, EX1 2DB</strong>. Starting at <strong>1:30pm</strong></p>
+        <div id="map-wedding" class="map"></div>
+        <p>Unfortunately, there is no available park directly on site, however there are a few car parks nearby as well as plenty of on street parking.  We recomend parking in the <a href="http://www.exeter.gov.uk/lgnl/index.aspx?articleid=1450">triangle car park</a>, which is directly behind the church. Because it is very close to Christmas we would recomend leaving plenty of time to find somewhere to park as the city centre is very busy around this time.</p>
+      </section>
+
+      <section id="section-reception" class="row">
+        <h2>The Reception</h2>
+        <p>The reception will be at <strong>The Corn Barn, near Cullompton, EX15 1NF</strong>. Google maps will give very good directions, some older sat nav's may give less than perfect directions! There is ample parking opposite the venue in a purpose built car park.</p>
+        <div id="map-reception" class="map"></div>
+      </section>
+
+      <section id="section-travel" class="row">
+        <h2>Travel on the Day</h2>
+        <p>Some information about travel on the day...</p>
+      </section>
+
+      <section id="section-list" class="row">
+        <h2>The Gift List</h2>
+        <p>We're looking forward to celebrating our wedding day with you all, but if you would like to help us in our creating a home together we have registered a gift list with <a href="http://www.johnlewistgiftlist.com/">John Lewis</a>. The list number is <strong>640461</strong>. If nothing catches your interest then any John Lewis vouchers would go towards furnishings.</p> <p>We're looking forward to our honeymoon in Madeira, if you happen to have any spare Euro's lying around we'll have a jar for them at the reception and would be greatly appreciated!</p>
+      </section>
+
+      <section id="section-accomodation" class="row">
+        <h2>Accomodation</h2>
+        <p>If you're hoping to stay in Collumpton here are a few suggestions:</p>
+        <ul>
+          <li><a href="http://www.padbrookpark.co.uk/">Padbrook Park</a> (01884 836100)</li>
+          <li><a href="http://www.bookbinders-cullompton.co.uk/">Bookbinders B&amp;B</a> (01884 821198))</li>
+          <li><a href="http://www.newcourtbarton-devon.co.uk/">Newcourt Barton B&amp;B</a> (01884 277326)</li>
+        </ul>
+        <p>In Exeter there is a large selection of hotels available, some ideas:</p>
+        <ul>
+          <li><a href="https://www.travelodge.co.uk/">Travelodge</a></li>
+          <li><a href=https://www.jurysinns.com/"">Jury's Inn</a> (Right next door to the venue)</li>
+          <li><a href="http://www.southernhayhouse.com/">Southernhay House</a></li>
+        </ul>
+        <p>If you would like us to help you find somewhere to stay (a hotel or with friends) then let us know and we'll try to help!</p>
+      </section>
+
+      <section id="section-rsvp" class="row">
+        <h2>RSVP</h2>
+        <p>Please RSVP by 12<sup>th</sup> September 2015 to either:</p>
+        <ul>
+          <li>Lydia and Steve, 35 Saxon Road, Exeter, EX1 2TD</li>
+          <li><a href="mailto:lydia.titmus@gmail.com">lydia.titmus@gmail.com</a>
+        </ul>
+
+      </section>
+
+    </div>
+
+    <script>
+      var map;
+      function initMaps() {
+        var co1 = {lat: 50.726148, lng: -3.521159};
+        var co2 = {lat: 50.873227, lng: -3.4059569};
+        map = new google.maps.Map(document.getElementById('map-wedding'), {
+          center: co1,
+          zoom: 15,
+          scrollwheel: false
+        });
+       var marker = new google.maps.Marker({
+          position: co1,
+          map: map,
+          title: 'Belmont Chapel'
+        });
+        map = new google.maps.Map(document.getElementById('map-reception'), {
+          center: co2,
+          zoom: 13,
+          scrollwheel: false
+        });
+       var marker = new google.maps.Marker({
+          position: co2,
+          map: map,
+          title: 'Belmont Chapel'
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMaps" async defer></script>
+  </body>
+</html>
