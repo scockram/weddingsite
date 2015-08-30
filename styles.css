@@ -67,6 +67,11 @@ border: 3px solid white;
     position: relative;
     top: auto;
   }
+
+  body .container section {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 @media (min-width: 768px){
