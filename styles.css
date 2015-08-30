@@ -2,6 +2,25 @@ body {
   position: relative;
 }
 
+.navbar {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background: #004810;
+}
+
+.navbar-default .navbar-nav>li.active>a {
+  background:#277b43;
+  color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #ffbf00;
+}
+.navbar-default .navbar-nav>li:hover>a {
+  color: #fff;
+}
+
 section {
   margin-bottom: 15px;
   font-family: 'Lato', sans-serif;
